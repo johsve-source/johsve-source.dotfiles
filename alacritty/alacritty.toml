@@ -1,0 +1,114 @@
+# Window configuration
+[window]
+opacity = 0.95  # Slightly transparent for better readability
+startup_mode = "Maximized"  # Start with a full window for more screen space
+decorations = "full"
+dynamic_padding = true
+
+[window.padding]
+x = 5
+y = 5
+
+# Font configuration
+[font]
+size = 11.0
+
+[font.normal]
+family = "MonoLisa-Regular"
+style = "Regular"
+
+[font.bold]
+family = "MonoLisa-Regular"
+style = "Bold"
+
+[font.italic]
+family = "MonoLisa-Regular"
+style = "Italic"
+
+[font.bold_italic]
+family = "MonoLisa-Regular"
+style = "Bold Italic"
+
+[font.offset]
+x = 0
+y = 1
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+# Cursor configuration
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 750
+unfocused_hollow = true
+
+# Color scheme (One Dark inspired)
+[colors.primary]
+background = "#282c34"
+foreground = "#abb2bf"
+
+[colors.normal]
+black = "#282c34"
+red = "#e06c75"
+green = "#98c379"
+yellow = "#e5c07b"
+blue = "#61afef"
+magenta = "#c678dd"
+cyan = "#56b6c2"
+white = "#abb2bf"
+
+[colors.bright]
+black = "#5c6370"
+red = "#e06c75"
+green = "#98c379"
+yellow = "#e5c07b"
+blue = "#61afef"
+magenta = "#c678dd"
+cyan = "#56b6c2"
+white = "#ffffff"
+
+# Key bindings
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "F11"
+action = "ToggleFullscreen"
+
+# Scrolling
+[scrolling]
+history = 20000
+multiplier = 3
+
+# Shell integration
+[shell]
+program = "/usr/bin/fish"  # Assuming you're using Fish shell
+
+# Hint configuration for quick URL opening
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.enabled]]
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)([a-zA-Z0-9./?=_~-]+)"
+command = "xdg-open"
+hyperlinks = true
+post_processing = true
+
+# Performance tuning
+[debug]
+render_timer = false
+persistent_logging = false
+log_level = "Warn"
+print_events = false
+
+# Environment variables
+[env]
+TERM = "xterm-256color"
